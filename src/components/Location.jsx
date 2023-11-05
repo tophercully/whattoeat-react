@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+// import filteredPlaces from 'src/PlaceGrab.jsx'
 
 
 export default function Location() {
@@ -11,9 +11,7 @@ export default function Location() {
 
 
     function pickIt() {
-        setPlace(prevPlace => {
-            return places[randomInt(0, places.length-1)].name
-        })
+        setPlace(places[randomInt(0, places.length-1)].name)
 
         console.log(place)
     }

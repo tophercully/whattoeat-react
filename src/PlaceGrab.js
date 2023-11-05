@@ -1,6 +1,12 @@
-// import google from './googMap.js'
+import initMap from '/tools.js'
+import "https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k&libraries=places&callback=initMap"
 
 // console.log(google)
+
+
+const google = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k&libraries=places&callback=initMap"
+console.log(google)
+
 
 let places;
 let locate;
@@ -11,32 +17,30 @@ let winner;
 let filteredPlaces = [];
 let winReport;
 
+
 let filter = {
     price: 2,
     isOpen: true,
     distance: 2000,
 }
 
-function randomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is exclusive and the minimum is inclusive
-  }
+// async function initMap() {
+//     const googleURL = await fetch("https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k&libraries=places&callback=initMap")
+//     console.log(window.google)
+//     const { Map } = await googleURL.maps.importLibrary("maps");
 
-export default async function initMap() {
-    const googleURL = await fetch("https://maps.googleapis.com/maps/api/js?key=AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k&libraries=places&callback=initMap")
-        console.log(window.google)
-        const { Map } = await googleURL.maps.importLibrary("maps");
-    
-        map = new Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
-        });
-}
+//     map = new Map(document.getElementById("map"), {
+//       center: { lat: -34.397, lng: 150.644 },
+//       zoom: 8,
+//     });
+// }
 
-console.log(window.google)
+// initMap()
 
-// export default async function initMap() {
+
+
+
+// async function initMap() {
 //     infoWindow = new google.maps.InfoWindow;
 //     currentInfoWindow = infoWindow;
     
@@ -111,9 +115,5 @@ console.log(window.google)
 //     }
 // }
 
-
-
-
-
-
-
+// export default winReport
+// console.log(filteredPlaces)
