@@ -11,7 +11,7 @@ export default function Location(props) {
     let [place, setPlace] = useState(placeHolder)
     let disabled = props.isLoaded ? false : true
     let buttonMsg = props.isLoaded ? 'Decide for me' : 'Searching for places...'
-    let starURL = props.pressed ? 'src/assets/star.svg' : ''
+    let starURL = props.pressed ? 'src/assets/starB.png' : ''
 
     function pickIt() {
         var num = Math.floor(Math.random()*props.places.length)
