@@ -35,17 +35,23 @@
 }
 
 .location{
+  position: fixed;
+  top:10%;
+  left:7%;
+  right:7%;
+  bottom: 10%;
   background-color: rgba(255, 255, 255, 0.69);
   border-radius: 2rem;
   /* outline:black solid 7px; */
   display:flex;
   flex-direction: column;
   justify-content: center;
+  
 
   /* place-items: center; */
   
-  height:100%;
-  width:100%;
+  /* height:100%;
+  width:100%; */
 }
 
 .location--display {
@@ -58,8 +64,9 @@
 .location--display--name {
   /* outline: auto; */
   flex-grow: 2;
-  font-size: 4rem;
-  overflow: hidden;
+  
+  font-size: 300%;
+  overflow: wrap;
 }
 .location--rating {
   font-weight:500;
