@@ -8,16 +8,22 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  let [places, setPlaces] = useState('placeholder')
-  let [isLoaded, setIsLoaded] = useState(false)
+  const [places, setPlaces] = useState('placeholder')
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [pressed, setPressed] = useState(false)
 
   return (
     <>
       {/* <Header/> */}
       <Wrapper apiKey='AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k' libraries={["places"]}>
-            <MapGrabber places={places} setPlaces={setPlaces} isLoaded={isLoaded} setIsLoaded={setIsLoaded} />
+            <MapGrabber 
+            places={places} 
+            setPlaces={setPlaces} 
+            isLoaded={isLoaded} 
+            setIsLoaded={setIsLoaded}
+            />
       </Wrapper>
-      <Location isLoaded={isLoaded} places={places}/>
+      <Location isLoaded={isLoaded} places={places} pressed={pressed} setPressed={setPressed}/>
     </>
   )
 }

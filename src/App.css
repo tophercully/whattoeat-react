@@ -4,6 +4,7 @@
   padding: 2rem;
   text-align: center;
   place-items: center;
+
 }
 
 
@@ -33,44 +34,60 @@
   display: none;
 }
 
-.selector--block {
-  object-fit: contain;
+.location{
+  background-color: rgba(255, 255, 255, 0.69);
+  border-radius: 2rem;
+  /* outline:black solid 7px; */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* place-items: center; */
+  
+  height:40rem;
+  width:30rem;
 }
 
 .location--display {
-  color: rgb(255, 255, 255);
-  position:relative;
-  object-fit: contain;
-  text-overflow: auto;
-  bottom:55%;
-  font-size: 2.5rem;
-
+  padding: 3rem;
+  /* outline: red solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.location--display--name {
+  /* outline: auto; */
+  flex-grow: 2;
+  font-size: 4rem;
+  overflow: hidden;
+}
+.location--rating {
+  font-weight:500;
+  font-size: 1rem;
+  /* outline:black solid 2px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.location--rating--star {
+  align-self: center;
   
-  /* background-color: rgb(35, 35, 35); */
-  /* border-radius: 5px; */
+  height:1rem;
+}
+.location--rating--value {
+  height: 1rem;
 }
 
-.location--selector{
-  /* display:flex; */
-
-  outline:black solid 1px;
-  
-  place-items: center;
-  
-  height:500px;
-}
 
 .location--form {
-  align-items: center;
+  padding:2rem;
 }
-
 .location--button  {
-  position: fixed;
-  left:25%;
-  right:25%;
-  top:60%;
-  
-  text-align: center;
-  align-items: center;
+  padding:1rem;
+  border-radius: 2rem;
+  /* outline: auto; */
+  margin-top: auto;
+  font-weight: 800;
+
 }
 

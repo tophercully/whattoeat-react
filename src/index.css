@@ -4,8 +4,11 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(241, 241, 241, 0.904);
-  background-color: #2d2d2d;
+  color: rgba(0, 0, 0, 0.904);
+  background-color: #e7e7e7;
+  background-image: url('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg');
+  background-size: cover;
+  background-position: center;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
