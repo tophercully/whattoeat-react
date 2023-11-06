@@ -11,6 +11,7 @@ function App() {
   const [places, setPlaces] = useState('placeholder')
   const [isLoaded, setIsLoaded] = useState(false)
   const [pressed, setPressed] = useState(false)
+  
 
   return (
     <>

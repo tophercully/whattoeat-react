@@ -11,7 +11,7 @@ export default function Location(props) {
     let [place, setPlace] = useState(placeHolder)
     let disabled = props.isLoaded ? false : true
     let buttonMsg = props.isLoaded ? 'Decide for me' : 'Searching for places...'
-    console.log(place.name, place.rating)
+    let starURL = props.pressed ? 'src/assets/star.svg' : ''
 
     function pickIt() {
         var num = Math.floor(Math.random()*props.places.length)
@@ -19,7 +19,11 @@ export default function Location(props) {
         props.setPressed(true)
     }
 
-    let starURL = props.pressed ? 'src/assets/Star.png' : ''
+
+    //update background
+    // const [bg, setBG] = useState('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg')
+    // document.getElementById('bgImg').setAttribute(src='bg')
+
 
     return(
         <div className="location">
@@ -27,7 +31,7 @@ export default function Location(props) {
                 <h1 className='location--display--name' >{place.name}</h1>
                 <div className='location--rating'>
                     <img src={starURL} className='location--rating--star'/>
-                    <p className='location--rating--value'>{place.rating}</p>
+                    <span className='location--rating--value'>{place.rating}</span>
                 </div>
             </div>
             
