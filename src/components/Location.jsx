@@ -12,19 +12,22 @@ export default function Location(props) {
         "Nah, that's not it",
         "hmm nuh uh",
         "Anything but that",
-        "One more",
+        "Nah",
+        "🙅🙅🙅"
     ]
 
     const angryDenials = [
         "Maybe try listing the places you *do* like??",
         "We're going to be here all day",
         "Decide on something already homie",
-        "I'm this close to making an executive decision",
+        "I'm so close to making an executive decision",
         "If you don't like this next one we're getting McDonalds",
         "I'm going to starve before you make a decision",
         "Clearly you didn't actually want me to decide",
-        "I'm getting so hangry just pick"
-    
+        "I'm getting so hangry just pick",
+        "Never deciding is a clever weight loss strategy",
+        "Okay well why don't *you* choose something and I'll tell you if I like it (I won't)",
+        "There's a clever comment on the illusion of choice hiding in this app somewhere"
     ]
 
     //use count to return more aggravated messages after 10 presses
