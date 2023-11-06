@@ -107,9 +107,17 @@ bgImg {
 .location--button  {
   padding:1rem;
   border-radius: 2rem;
-  /* outline: auto; */
+  outline: none;
+  border:none;
+  cursor: pointer;
   margin-top: auto;
   font-weight: 800;
+  /* display: block; */
 
+}
+
+.location--button:focus {
+  outline:none;
+  box-shadow: none;
 }
 
