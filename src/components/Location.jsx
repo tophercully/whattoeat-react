@@ -5,17 +5,17 @@ import React, {useState} from 'react'
 
 
 export default function Location(props) {
-    let placeHolder = 'Where Do I Want To Eat'
+    let placeHolder = 'Where Do You Want To Eat?'
     let [place, setPlace] = useState(placeHolder)
     var disabled
     disabled = props.isLoaded ? false : true
     var rating = props.isLoaded ? place.rating : ''
-
+    console.log(place)
     function pickIt() {
         var num = Math.floor(Math.random()*props.places.length)
         setPlace(props.places[num].name)
 
-        console.log(place)
+        
     }
 
     let buttonMsg = props.isLoaded ? 'Decide for me' : 'Searching for places...'

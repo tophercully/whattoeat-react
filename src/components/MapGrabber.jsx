@@ -13,7 +13,7 @@ export default function MapGrabber(props) {
     let filter = {
         price: 2,
         isOpen: true,
-        distance: 2000,
+        distance: 3000,
     }
     console.log('mapgrabbing')
     // console.log(window.google)
