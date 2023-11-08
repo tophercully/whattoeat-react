@@ -1,9 +1,5 @@
 import React, {useState} from 'react'
 
-
-// import filteredPlaces from 'src/PlaceGrab.jsx'
-
-
 export default function Location(props) {
     let placeHolder = {
         name: 'Where Do You Want To Eat?'
@@ -20,11 +16,11 @@ export default function Location(props) {
         "Maybe try listing the places you *do* like??",
         "We're going to be here all day",
         "Decide on something already homie",
-        "I'm so close to making an executive decision",
+        "Consider the next one an executive decision",
         "If you don't like this next one we're getting McDonalds",
         "I'm going to starve before you make a decision",
         "Clearly you didn't actually want me to decide",
-        "I'm getting so hangry just pick",
+        "I'm getting hangry so just pick",
         "Never deciding is a clever weight loss strategy",
         "Okay well why don't *you* choose something and I'll tell you if I like it (I won't)",
         "There's a clever comment on the illusion of choice hiding in this app somewhere"
@@ -47,12 +43,6 @@ export default function Location(props) {
         setCount(prevCount => prevCount+1)
     }
     console.log(count)
-
-
-    //update background
-    // const [bg, setBG] = useState('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg')
-    // document.getElementById('bgImg').setAttribute(src='bg')
-
 
     return(
         <div className="location">

@@ -19,29 +19,42 @@
   
   
 }
-
-bgImg {
-  min-height: 100%;
-  min-width: 1024px;
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+.regrab{
+  left:1rem;
+  top:1rem;
 }
 
 .heading {
+  left:0px;
+  top:0px;
   vertical-align: text-top;
-  font-size: 40px;
+  font-size: 1rem;
   text-align: center;
   width:100%;
   padding:0;
-  /* outline:black solid 1px; */
+  outline:black solid 1px;
   background-color: #f0f0f0;
+}
+
+.filter--window {
+  left:1rem;
+  display:flex;
+  flex-direction: column;
+  
+  
+}
+.filter--toggle {
+  right:1rem;
+  top:1rem;
+  /* display: flex; */
+  position:fixed;
+}
+.filter--apply {
+  height: 2rem;
+  width: 4rem;
+  font-size: 1vh;
+  
+
 }
 
 .map {
@@ -49,11 +62,12 @@ bgImg {
 }
 
 .location{
+  z-index: 1;
   position: fixed;
-  top:10%;
+  top:20%;
   left:7%;
   right:7%;
-  bottom: 10%;
+  bottom: 20%;
   background-color: rgba(255, 255, 255, 0.69);
   border-radius: 2rem;
   /* outline:black solid 7px; */
@@ -120,4 +134,6 @@ bgImg {
   outline:none;
   box-shadow: none;
 }
+
+
 

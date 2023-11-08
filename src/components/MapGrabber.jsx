@@ -4,19 +4,14 @@ import {Wrapper, Status} from '@googlemaps/react-wrapper'
 export default function MapGrabber(props) {
     let placesReturned;
     let map;
-    let options ;
+    let options;
     let service;
-    let winner;
-    let names
-    let filteredPlaces = [];
-    let winReport;
-    let filter = {
-        price: 2,
+    let filterVals = {
+        price: props.filters.price,
         isOpen: true,
-        distance: 3000,
+        distance: props.filters.distance*1.60934,
     }
     console.log('mapgrabbing')
-    // console.log(window.google)
     var locate = {
         lat:0.0,
         lng:0.0
@@ -29,11 +24,12 @@ export default function MapGrabber(props) {
     }
 
     function getPlaces() {
-     if(props.isLoaded == false) {   var request = {
+        console.log(props.isLoaded, 'is loaded and getting places')
+     if(props.isLoaded != true) {   var request = {
             location: locate,
             keyword: 'food',
             type: 'restaurant',
-            radius: filter.distance,
+            radius: filterVals.distance,
         }
         // console.log('here it is')
         // console.log(google.maps.places)
@@ -52,6 +48,7 @@ export default function MapGrabber(props) {
                 center: locate,
                 zoom: 9,
             })
+            console.log(props.isLoaded, 'is loaded about to get places')
             getPlaces()
             
         })
@@ -72,8 +69,4 @@ export default function MapGrabber(props) {
             props.setIsLoaded(true) 
         }
     }
-
-
-    return filteredPlaces
-
 }
