@@ -31,7 +31,7 @@ export default function Location(props) {
     let [place, setPlace] = useState(placeHolder)
     let disabled = props.isLoaded ? false : true
     let buttonMsg = props.isLoaded ? "🤷 🤷 🤷" : 'Searching for places...'
-    let starURL = props.pressed ? 'src/assets/starB.png' : ''
+    let starURL = props.pressed ? '/starB.png' : ''
     let denialsNow = count < 5 ? denials : angryDenials
     let denialNow = denialsNow[Math.floor(Math.random()*denialsNow.length)]
     let finalMsg = props.pressed ? denialNow : buttonMsg
