@@ -15,16 +15,41 @@ export default function Filters(props) {
         props.setPressed(false)
         
     }
+
+    
+    const [currentFilters, setCurrentFilters] = useState({
+        price: 2,
+        distance:2,
+        
+    })
+
+    function handleChange() {
+        setCurrentFilters(
+            {
+            distance:document.getElementById('filter--distance').value,
+            price:document.getElementById('filter--price').value
+        }
+    )
+        
+        
+    }
     return(
-        <div >
+        <div className='filter'>
             <Popup trigger={<button className='filter--toggle'>Filters</button>}>
-                <div className='filter--window'>
-                    <form>
-                    <input type='range' id='filter--distance' name="distance" min='1' max="20" defaultValue={2}/>
-                    <input type='range' id='filter--price' min='1' max="4" defaultValue={2}/>
+                <form className='filter--window'>
+                    <span className='filter--item'>
+                        <p>Distance (mi): {currentFilters.distance}</p>
+                        <input type='range' id='filter--distance' name="distance" min='1' max="20" defaultValue={2} onChange={handleChange}/>
+                    </span>
+                        <br></br>
+
+                    <span className='filter--item'>
+                        <p>Price Level: {currentFilters.price}</p>
+                        <input type='range' id='filter--price' min='1' max="4" defaultValue={2} onChange={handleChange}/>
+                    </span>
+                    <br></br>
                     <button className='filter--apply' onClick={applyFilters}>Apply</button>
-                    </form>
-                </div>
+                </form>
             </Popup>
         </div>
     )

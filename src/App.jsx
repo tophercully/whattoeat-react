@@ -18,7 +18,6 @@ function App() {
 
   return (
     <>
-      {/* <Header/> */}
       <FilterMenu 
         filters={filters} 
         setFilters={setFilters} 

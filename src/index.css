@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,7 +8,7 @@
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.904);
   background-color: #e7e7e7;
-  background-image: url('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg');
+  /* background-image: url('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg'); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,9 +31,7 @@ a:hover {
   color: #535bf2;
 }
 
-.regrab{
-  left:0px;
-}
+
 
 body {
   margin: 0;
@@ -46,34 +46,27 @@ h1 {
   line-height: 1.1;
 }
 
+
+
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  /* border-radius: 8px; */
+  /* border: 1px solid transparent; */
+  /* padding: 4vh; */
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #047B37;
+  /* opacity: 90%; */
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
+  /* background-color: #5B7554; */
+  
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}

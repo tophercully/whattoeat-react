@@ -15,12 +15,12 @@ export default function Location(props) {
     const angryDenials = [
         "Maybe try listing the places you *do* like??",
         "We're going to be here all day",
-        "Decide on something already homie",
+        // "Decide on something already homie",
         "Consider the next one an executive decision",
         "If you don't like this next one we're getting McDonalds",
-        "I'm going to starve before you make a decision",
+        // "I'm going to starve before you make a decision",
         "Clearly you didn't actually want me to decide",
-        "I'm getting hangry so just pick",
+        // "I'm getting hangry so just pick",
         "Never deciding is a clever weight loss strategy",
         "Okay well why don't *you* choose something and I'll tell you if I like it (I won't)",
         "There's a clever comment on the illusion of choice hiding in this app somewhere"
@@ -30,7 +30,7 @@ export default function Location(props) {
     let [count, setCount] = useState(0)
     let [place, setPlace] = useState(placeHolder)
     let disabled = props.isLoaded ? false : true
-    let buttonMsg = props.isLoaded ? "🤷 🤷 🤷" : 'Searching for places...'
+    let buttonMsg = props.isLoaded ? "Pick For Me" : 'Searching for places...'
     let starURL = props.pressed ? '/starB.png' : ''
     let denialsNow = count < 5 ? denials : angryDenials
     let denialNow = denialsNow[Math.floor(Math.random()*denialsNow.length)]
@@ -46,6 +46,8 @@ export default function Location(props) {
 
     return(
         <div className="location">
+            <div className='location--spacer'></div>
+                <br></br>
             <div className='location--display'>
                 <h1 className='location--display--name' >{place.name}</h1>
                 <div className='location--rating'>
@@ -56,6 +58,8 @@ export default function Location(props) {
             
             <div id='map' className='map'></div>
             <div className='location--form'> 
+            <div className='location--button--pad'>
+
                 <button 
                 id='selectorButton' 
                 className='location--button'  
@@ -63,6 +67,7 @@ export default function Location(props) {
                 disabled={disabled} >
                     {finalMsg}
                 </button>
+            </div>
             </div>
         </div>
         
