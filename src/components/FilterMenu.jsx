@@ -23,8 +23,7 @@ export default function Filters(props) {
         
     })
 
-    function handleChange() {
-        e.preventDefault()
+    function handleChange(e) {
         setCurrentFilters(
             {
             
