@@ -24,8 +24,10 @@ export default function Filters(props) {
     })
 
     function handleChange() {
+        e.preventDefault()
         setCurrentFilters(
             {
+            
             distance:document.getElementById('filter--distance').value,
             price:document.getElementById('filter--price').value
         }
