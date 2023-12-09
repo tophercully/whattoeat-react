@@ -17,6 +17,7 @@
 
 .body * {
   /* outline: auto; */
+  /* opacity: 100%; */
 }
 
 .body{
@@ -30,7 +31,8 @@
 
   margin:1vh;
   border-radius: 2rem;
-  background: radial-gradient(#ca5ff5, #00ffff);
+  background: radial-gradient(#ca5ff5, #00ffffd9);
+  
   animation: fadeInUp 1000ms ease-in-out;
 }
 
@@ -84,6 +86,9 @@
   transition:all 250ms ease-in-out;
   border:none;
   outline: none;
+  font-size: 1.5vw;
+  font-size-adjust: 2vw;
+  font-weight: 500;
   animation: fadeIn 6000ms ease-in-out;
 }
 
@@ -183,10 +188,11 @@
 }
 .location--rating--value{
   font-weight: 500;
-  font-size: var(--rating-height);
+  font-size: 2vw;
 }
 .location--rating--star{
-  width:var(--rating-height*1.1);
+  width:2vw;
+  height:auto;
   filter: invert();
 }
 
