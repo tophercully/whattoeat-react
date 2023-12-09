@@ -17,14 +17,8 @@ function App() {
   })
 
   return (
-    <>
-      <FilterMenu 
-        filters={filters} 
-        setFilters={setFilters} 
-        setIsLoaded={setIsLoaded} 
-        pressed={pressed} 
-        setPressed={setPressed}
-        />
+    <div className='body'>
+     
       <Wrapper apiKey='AIzaSyBL5PB9WLQmumeY-9KHgwsHOSP1L7ExP2k' libraries={["places"]}>
             <MapGrabber 
               filters={filters}
@@ -34,13 +28,22 @@ function App() {
               setIsLoaded={setIsLoaded}
             />
       </Wrapper>
+      <FilterMenu 
+        filters={filters} 
+        setFilters={setFilters} 
+        setIsLoaded={setIsLoaded} 
+        pressed={pressed} 
+        setPressed={setPressed}
+        />
       <Location 
         isLoaded={isLoaded} 
         places={places} 
         pressed={pressed} 
         setPressed={setPressed}
       />
-    </>
+       
+       <br></br>
+    </div>
   )
 }
 

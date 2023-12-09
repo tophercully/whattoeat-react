@@ -33,6 +33,7 @@ a:hover {
 
 
 
+
 body {
   margin: 0;
   display: flex;
@@ -55,7 +56,7 @@ button {
   font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #047B37;
+  background-color: #ca5ff5;
   /* opacity: 90%; */
   cursor: pointer;
   transition: border-color 0.25s;

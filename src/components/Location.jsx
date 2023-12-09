@@ -47,19 +47,15 @@ export default function Location(props) {
     return(
         <div className="location">
             <div className='location--spacer'></div>
-                <br></br>
-            <div className='location--display'>
-                <h1 className='location--display--name' >{place.name}</h1>
-                <div className='location--rating'>
+            <div className='location--result'>
+                <h1 className='location--result--name' >{place.name}</h1>
+                <div className='location--result--rating'>
                     <img src={starURL} className='location--rating--star'/>
                     <span className='location--rating--value'>{place.rating}</span>
                 </div>
             </div>
             
-            <div id='map' className='map'></div>
-            <div className='location--form'> 
             <div className='location--button--pad'>
-
                 <button 
                 id='selectorButton' 
                 className='location--button'  
@@ -68,7 +64,8 @@ export default function Location(props) {
                     {finalMsg}
                 </button>
             </div>
-            </div>
+            
+            <div id='map' className='map'></div>
         </div>
         
     )

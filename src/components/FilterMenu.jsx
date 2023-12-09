@@ -35,7 +35,9 @@ export default function Filters(props) {
     }
     return(
         <div className='filter'>
-            <Popup trigger={<button className='filter--toggle'>Filters</button>}>
+            <Popup trigger={<a className='filter--toggle'>
+                <img className='filter--img' src='/filter.svg'></img>
+            </a>}>
                 <form className='filter--window'>
                     <span className='filter--item'>
                         <p>Distance (mi): {currentFilters.distance}</p>
