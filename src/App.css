@@ -96,6 +96,7 @@
   transition:all 250ms ease-in-out;
   border:none;
   outline: none;
+  color: #ffffff;
   font-size: (max(1.5vw, 1.5vh), 5vh);
   font-weight: 500;
   animation: fadeIn 6000ms ease-in-out;
