@@ -17,8 +17,11 @@
 
 
   --rating-height: 3vw;
-  /* overflow-y: hidden; */
   overflow: auto;
+
+  @media (pointer:none), (pointer:coarse) {
+    filter: blur();
+  }
 }
 
 
