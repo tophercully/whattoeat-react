@@ -8,6 +8,7 @@
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.904);
   background-color: #ffffff;
+  background: radial-gradient(#ca5ff5, #00ffffd9);
   /* background-image: url('https://i.pinimg.com/originals/de/7e/de/de7ede8ab5c498d7bc833f2f8e41372b.jpg'); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -20,6 +21,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
 
 a {

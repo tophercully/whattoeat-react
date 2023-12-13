@@ -4,6 +4,9 @@ export default function Location(props) {
     let placeHolder = {
         name: 'Where Do You Want To Eat?'
     }
+    let appliedFilters = {
+        name: 'Okay, what else will show up now?'
+    }
     const denials = [
         "Nah, that's not it",
         "hmm nuh uh",

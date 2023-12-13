@@ -9,11 +9,11 @@
   width:100vw;
   /* max-width: 100vw; */
   /* outline: auto; */
-  position:fixed;
+  /* position:fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(#ca5ff5, #00ffffd9);
+  
 
 
   --rating-height: 3vw;
@@ -22,12 +22,15 @@
   @media (pointer:none), (pointer:coarse) {
     filter: blur();
   }
+
 }
 
 
 
 .body * {
-  /* outline: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* opacity: 100%; */
 }
 
