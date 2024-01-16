@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 export default function Location(props) {
     let placeHolder = {
-        name: 'Where Do You Want To Eat?'
+        name: 'Hungry?'
     }
     let appliedFilters = {
         name: 'Okay, what else will show up now?'
@@ -12,7 +12,8 @@ export default function Location(props) {
         "hmm nuh uh",
         "Anything but that",
         "Nah",
-        "🙅🙅🙅"
+        "🙅🙅🙅",
+        "No thank you"
     ]
 
     const angryDenials = [
@@ -34,7 +35,7 @@ export default function Location(props) {
     let [place, setPlace] = useState(placeHolder)
     let disabled = props.isLoaded ? false : true
     let buttonMsg = props.isLoaded ? "Pick For Me" : 'Searching for places...'
-    let starURL = props.pressed ? '/starB.png' : ''
+    let starURL = props.pressed ? '/starB.svg' : ''
     let denialsNow = count < 5 ? denials : angryDenials
     let denialNow = denialsNow[Math.floor(Math.random()*denialsNow.length)]
     let finalMsg = props.pressed ? denialNow : buttonMsg
