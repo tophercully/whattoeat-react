@@ -91,6 +91,7 @@
 
 .location--result{
   position: fixed;
+  transform: translateY(15vh);
   font-weight: 500;
   font-size: min(max(2vw, 1.5vh), 5vh);
   max-width: 80%;
