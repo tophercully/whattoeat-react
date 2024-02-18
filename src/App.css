@@ -23,7 +23,7 @@
   z-index: 10;
 
   background-color: var(--secondary);
-  content: url(./public/menu.svg);
+  content: url(../public/menu.svg);
   fill: var(--text);
   border: 1px solid var(--text);
   border-radius: 100%;
@@ -40,7 +40,7 @@
   transform: scale(1.1);
 }
 .filter--toggle:has(~ .filter--checkbox:checked){
-  content: url(./public/x.svg);
+  content: url(../public/x.svg);
   background-color: var(--bg);
 }
 .filter--toggle * {
@@ -49,15 +49,6 @@
 
 .filter--checkbox{
   display: none;
-}
-
-.filter--img {
-  align-self: center;
-  content: url(./public/menu.svg);
-  filter: invert(90%);
-  animation: fadeIn 6000ms ease-in-out;
-
-  
 }
 
 .filter{
@@ -92,7 +83,7 @@
   background-color: var(--bg);
   color: var(--text);
   accent-color: var(--text);
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
