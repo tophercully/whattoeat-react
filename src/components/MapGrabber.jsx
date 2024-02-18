@@ -1,5 +1,3 @@
-import React from "react";
-import {Wrapper, Status} from '@googlemaps/react-wrapper'
 
 export default function MapGrabber(props) {
     let placesReturned;
@@ -9,8 +7,9 @@ export default function MapGrabber(props) {
     let filterVals = {
         price: props.filters.price,
         isOpen: true,
-        distance: props.filters.distance*1.60934,
+        distance: props.filters.distance*1.60934*1000,
     }
+    console.log('filter', filterVals)
     console.log('mapgrabbing')
     var locate = {
         lat:0.0,
@@ -31,9 +30,6 @@ export default function MapGrabber(props) {
             type: 'restaurant',
             radius: filterVals.distance,
         }
-        // console.log('here it is')
-        // console.log(google.maps.places)
-        // console.log('there it was')
 
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, nearbyCallback);}
@@ -62,7 +58,7 @@ export default function MapGrabber(props) {
     function nearbyCallback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             placesReturned = results
-    
+            console.log(placesReturned)
             console.log('load complete')
 
             props.setPlaces(placesReturned)
